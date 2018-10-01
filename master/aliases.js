@@ -45,6 +45,7 @@ ALIASES['net2'] = {};
 ALIASES['nodrop'] = {};
 ALIASES['num_cpus'] = {};
 ALIASES['oauth_client'] = {};
+ALIASES['oauth_client'] = {};
 ALIASES['openssl'] = {};
 ALIASES['openssl_sys'] = {};
 ALIASES['owning_ref'] = {};
