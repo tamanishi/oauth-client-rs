@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source to the Rust file `/home/travis/.cargo/registry/src/github.com-1ecc6299db9ec823/ring-0.13.2/src/signature.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>signature.rs.html -- source</title><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../dark.css"><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script src="../../storage.js"></script></head><body class="rustdoc source"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../../settings.html"><img src="../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><pre class="line-numbers"><span id="1">  1</span>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source to the Rust file `/home/travis/.cargo/registry/src/github.com-1ecc6299db9ec823/ring-0.13.3/src/signature.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>signature.rs.html -- source</title><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../dark.css"><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script src="../../storage.js"></script></head><body class="rustdoc source"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../../settings.html"><img src="../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><pre class="line-numbers"><span id="1">  1</span>
 <span id="2">  2</span>
 <span id="3">  3</span>
 <span id="4">  4</span>
@@ -445,6 +445,8 @@
 <span id="445">445</span>
 <span id="446">446</span>
 <span id="447">447</span>
+<span id="448">448</span>
+<span id="449">449</span>
 </pre><pre class="rust ">
 <span class="comment">// Copyright 2015-2017 Brian Smith.</span>
 <span class="comment">//</span>
@@ -593,7 +595,7 @@
 <span class="doccomment">//!             untrusted::Input::from(&amp;pkcs8_bytes))?;</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//! // Sign the message &quot;hello, world&quot;.</span>
-<span class="doccomment">//! const MESSAGE: &amp;&#39;static [u8] = b&quot;hello, world&quot;;</span>
+<span class="doccomment">//! const MESSAGE: &amp;[u8] = b&quot;hello, world&quot;;</span>
 <span class="doccomment">//! let sig = key_pair.sign(MESSAGE);</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//! // Normally an application would extract the bytes of the signature and</span>
@@ -750,14 +752,16 @@
     },
 };
 
-<span class="kw">pub</span> <span class="kw">use</span> <span class="ident">ec</span>::<span class="ident">curve25519</span>::<span class="ident">ed25519</span>::{
+<span class="kw">pub</span> <span class="kw">use</span> <span class="ident">ec</span>::<span class="ident">curve25519</span>::<span class="ident">ed25519</span>::<span class="ident">PUBLIC_KEY_LEN</span> <span class="kw">as</span> <span class="ident">ED25519_PUBLIC_KEY_LEN</span>;
+
+<span class="kw">pub</span> <span class="kw">use</span> <span class="ident">ec</span>::<span class="ident">curve25519</span>::<span class="ident">ed25519</span>::<span class="ident">verification</span>::{
     <span class="ident">EdDSAParameters</span>,
-
     <span class="ident">ED25519</span>,
+};
 
+<span class="kw">pub</span> <span class="kw">use</span> <span class="ident">ec</span>::<span class="ident">curve25519</span>::<span class="ident">ed25519</span>::<span class="ident">signing</span>::{
     <span class="ident">KeyPair</span> <span class="kw">as</span> <span class="ident">Ed25519KeyPair</span>,
-    <span class="ident">ED25519_PKCS8_V2_LEN</span>,
-    <span class="ident">ED25519_PUBLIC_KEY_LEN</span>,
+    <span class="ident">PKCS8_V2_LEN</span> <span class="kw">as</span> <span class="ident">ED25519_PKCS8_V2_LEN</span>,
 };
 
 <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">all</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;rsa_signing&quot;</span>, <span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;use_heap&quot;</span>))]</span>
