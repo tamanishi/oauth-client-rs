@@ -37,6 +37,7 @@ ALIASES['crossbeam_utils'] = {};
 ALIASES['dtoa'] = {};
 ALIASES['encoding_rs'] = {};
 ALIASES['encoding_rs'] = {};
+ALIASES['encoding_rs'] = {};
 ALIASES['failure'] = {};
 ALIASES['failure'] = {};
 ALIASES['failure'] = {};
