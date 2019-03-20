@@ -111,4 +111,3 @@ sourcesIndex["untrusted"] = {"name":"","dirs":[],"files":["untrusted.rs"]};
 sourcesIndex["url"] = {"name":"","dirs":[],"files":["encoding.rs","form_urlencoded.rs","host.rs","lib.rs","origin.rs","parser.rs","path_segments.rs","quirks.rs","slicing.rs"]};
 sourcesIndex["uuid"] = {"name":"","dirs":[],"files":["adapter.rs","core_support.rs","lib.rs","prelude.rs","std_support.rs"]};
 sourcesIndex["want"] = {"name":"","dirs":[],"files":["lib.rs"]};
-createSourceSidebar();
