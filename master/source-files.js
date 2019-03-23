@@ -89,7 +89,7 @@ sourcesIndex["tokio"] = {"name":"","dirs":[{"name":"codec","dirs":[],"files":["l
 sourcesIndex["tokio_codec"] = {"name":"","dirs":[],"files":["bytes_codec.rs","lib.rs","lines_codec.rs"]};
 sourcesIndex["tokio_core"] = {"name":"","dirs":[{"name":"io","dirs":[],"files":["copy.rs","flush.rs","frame.rs","mod.rs","read.rs","read_exact.rs","read_to_end.rs","read_until.rs","split.rs","window.rs","write_all.rs"]},{"name":"net","dirs":[{"name":"udp","dirs":[],"files":["frame.rs","mod.rs"]}],"files":["mod.rs","tcp.rs"]},{"name":"reactor","dirs":[],"files":["interval.rs","mod.rs","poll_evented.rs","poll_evented2.rs","timeout.rs"]}],"files":["lib.rs"]};
 sourcesIndex["tokio_current_thread"] = {"name":"","dirs":[],"files":["lib.rs","scheduler.rs"]};
-sourcesIndex["tokio_executor"] = {"name":"","dirs":[],"files":["enter.rs","global.rs","lib.rs","park.rs"]};
+sourcesIndex["tokio_executor"] = {"name":"","dirs":[],"files":["enter.rs","error.rs","executor.rs","global.rs","lib.rs","park.rs","typed.rs"]};
 sourcesIndex["tokio_fs"] = {"name":"","dirs":[{"name":"file","dirs":[],"files":["clone.rs","create.rs","metadata.rs","mod.rs","open.rs","open_options.rs","seek.rs"]},{"name":"os","dirs":[],"files":["mod.rs","unix.rs"]}],"files":["create_dir.rs","create_dir_all.rs","hard_link.rs","lib.rs","metadata.rs","read.rs","read_dir.rs","read_link.rs","remove_dir.rs","remove_file.rs","rename.rs","set_permissions.rs","stderr.rs","stdin.rs","stdout.rs","symlink_metadata.rs","write.rs"]};
 sourcesIndex["tokio_io"] = {"name":"","dirs":[{"name":"_tokio_codec","dirs":[],"files":["decoder.rs","encoder.rs","framed.rs","framed_read.rs","framed_write.rs","mod.rs"]},{"name":"codec","dirs":[],"files":["bytes_codec.rs","decoder.rs","encoder.rs","lines_codec.rs","mod.rs"]},{"name":"io","dirs":[],"files":["copy.rs","flush.rs","mod.rs","read.rs","read_exact.rs","read_to_end.rs","read_until.rs","shutdown.rs","write_all.rs"]}],"files":["allow_std.rs","async_read.rs","async_write.rs","framed.rs","framed_read.rs","framed_write.rs","length_delimited.rs","lib.rs","lines.rs","split.rs","window.rs"]};
 sourcesIndex["tokio_reactor"] = {"name":"","dirs":[],"files":["background.rs","lib.rs","poll_evented.rs","registration.rs","sharded_rwlock.rs"]};
@@ -111,4 +111,3 @@ sourcesIndex["untrusted"] = {"name":"","dirs":[],"files":["untrusted.rs"]};
 sourcesIndex["url"] = {"name":"","dirs":[],"files":["encoding.rs","form_urlencoded.rs","host.rs","lib.rs","origin.rs","parser.rs","path_segments.rs","quirks.rs","slicing.rs"]};
 sourcesIndex["uuid"] = {"name":"","dirs":[],"files":["adapter.rs","core_support.rs","lib.rs","prelude.rs","std_support.rs"]};
 sourcesIndex["want"] = {"name":"","dirs":[],"files":["lib.rs"]};
-createSourceSidebar();
