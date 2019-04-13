@@ -1,6 +1,6 @@
 var N = null;var sourcesIndex = {};
 sourcesIndex["adler32"] = {"name":"","dirs":[],"files":["lib.rs"]};
-sourcesIndex["arrayvec"] = {"name":"","dirs":[],"files":["array.rs","array_string.rs","char.rs","errors.rs","lib.rs","maybe_uninit_nodrop.rs","range.rs"]};
+sourcesIndex["arrayvec"] = {"name":"","dirs":[],"files":["array.rs","array_string.rs","char.rs","errors.rs","lib.rs","maybe_uninit.rs","range.rs"]};
 sourcesIndex["backtrace"] = {"name":"","dirs":[{"name":"backtrace","dirs":[],"files":["libunwind.rs","mod.rs"]},{"name":"symbolize","dirs":[],"files":["libbacktrace.rs","mod.rs"]}],"files":["capture.rs","dylib.rs","lib.rs","types.rs"]};
 sourcesIndex["backtrace_sys"] = {"name":"","dirs":[],"files":["lib.rs"]};
 sourcesIndex["base64"] = {"name":"","dirs":[],"files":["chunked_encoder.rs","decode.rs","display.rs","encode.rs","lib.rs","line_wrap.rs","tables.rs"]};
@@ -68,7 +68,7 @@ sourcesIndex["rand_xorshift"] = {"name":"","dirs":[],"files":["lib.rs"]};
 sourcesIndex["relay"] = {"name":"","dirs":[],"files":["lib.rs"]};
 sourcesIndex["reqwest"] = {"name":"","dirs":[{"name":"async_impl","dirs":[],"files":["body.rs","client.rs","decoder.rs","mod.rs","request.rs","response.rs"]}],"files":["body.rs","client.rs","connect.rs","error.rs","into_url.rs","lib.rs","multipart.rs","multipart_.rs","proxy.rs","redirect.rs","request.rs","response.rs","tls.rs","wait.rs"]};
 sourcesIndex["ring"] = {"name":"","dirs":[{"name":"aead","dirs":[],"files":["aes_gcm.rs","chacha20_poly1305.rs","chacha20_poly1305_openssh.rs","mod.rs"]},{"name":"arithmetic","dirs":[],"files":["mod.rs","montgomery.rs"]},{"name":"digest","dirs":[],"files":["mod.rs","sha1.rs"]},{"name":"ec","dirs":[{"name":"curve25519","dirs":[{"name":"ed25519","dirs":[],"files":["digest.rs","mod.rs","signing.rs","verification.rs"]}],"files":["mod.rs","ops.rs","x25519.rs"]},{"name":"suite_b","dirs":[{"name":"ecdsa","dirs":[],"files":["digest_scalar.rs","mod.rs","signing.rs","verification.rs"]},{"name":"ops","dirs":[],"files":["elem.rs","mod.rs","p256.rs","p384.rs"]}],"files":["curve.rs","ecdh.rs","mod.rs","private_key.rs","public_key.rs"]}],"files":["mod.rs"]},{"name":"rsa","dirs":[],"files":["bigint.rs","mod.rs","padding.rs","verification.rs"]}],"files":["agreement.rs","bits.rs","bssl.rs","c.rs","chacha.rs","constant_time.rs","debug.rs","der.rs","error.rs","hkdf.rs","hmac.rs","init.rs","lib.rs","limb.rs","pbkdf2.rs","pkcs8.rs","poly1305.rs","polyfill.rs","rand.rs","signature.rs","signature_impl.rs","test.rs"]};
-sourcesIndex["rustc_demangle"] = {"name":"","dirs":[],"files":["lib.rs"]};
+sourcesIndex["rustc_demangle"] = {"name":"","dirs":[],"files":["legacy.rs","lib.rs","v0.rs"]};
 sourcesIndex["ryu"] = {"name":"","dirs":[{"name":"buffer","dirs":[],"files":["mod.rs"]},{"name":"pretty","dirs":[],"files":["exponent.rs","mantissa.rs","mod.rs"]}],"files":["common.rs","d2s.rs","d2s_full_table.rs","d2s_intrinsics.rs","digit_table.rs","f2s.rs","lib.rs"]};
 sourcesIndex["safemem"] = {"name":"","dirs":[],"files":["lib.rs"]};
 sourcesIndex["scoped_tls"] = {"name":"","dirs":[],"files":["lib.rs"]};
