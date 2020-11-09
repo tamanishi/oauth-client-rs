@@ -45,7 +45,7 @@ extern crate url;
 use rand::{distributions::Alphanumeric, Rng};
 use reqwest::header::{Authorization, ContentType};
 use reqwest::mime;
-use reqwest::{Client, RequestBuilder, StatusCode};
+use reqwest::{Client, RequestBuilder};
 use ring::{digest, hmac};
 use std::borrow::Cow;
 use std::collections::HashMap;
@@ -312,7 +312,7 @@ pub fn post(
 /// Send request to the server
 fn send(builder: &mut RequestBuilder) -> Result<Vec<u8>> {
     let mut response = builder.send()?;
-    if response.status() != StatusCode::Ok && response.status() != StatusCode::Accepted && response.status() != StatusCode::Created {
+    if response.status().is_success() {
         bail!(HttpStatusError(response.status().into()));
     }
     let mut buf = vec![];
