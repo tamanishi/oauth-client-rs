@@ -312,7 +312,7 @@ pub fn post(
 /// Send request to the server
 fn send(builder: &mut RequestBuilder) -> Result<Vec<u8>> {
     let mut response = builder.send()?;
-    if response.status().is_success() {
+    if !response.status().is_success() {
         bail!(HttpStatusError(response.status().into()));
     }
     let mut buf = vec![];
